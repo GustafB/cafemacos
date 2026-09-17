@@ -1,0 +1,24 @@
+# Ghostty, mirroring the cafeos kitty settings (Stylix palette replaced by Tokyo Night)
+theme = TokyoNight Storm
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13
+background-opacity = 0.92
+background-blur-radius = 20
+window-padding-x = 4
+window-padding-y = 4
+scrollback-limit = 2000000
+confirm-close-surface = false
+macos-titlebar-style = hidden
+window-decoration = true
+
+# alt-enter and the nvim file handler use `open -na Ghostty`, which starts another
+# instance: don't let it restore old windows, and let it quit once its window closes
+window-save-state = never
+quit-after-last-window-closed = true
+
+# AeroSpace sees macOS native tabs as separate invisible windows (AeroSpace #68, no fix
+# in any macOS tiler), so cmd-t opens a tiled window; cmd-d / cmd-shift-d split in-window
+keybind = super+t=new_window
+
+keybind = alt+minus=decrease_font_size:1
+keybind = alt+equal=increase_font_size:1

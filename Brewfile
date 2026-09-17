@@ -1,0 +1,8 @@
+tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
+cask "nikitabobko/tap/aerospace"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-sketchybar-app-font"
+brew "FelixKratz/formulae/sketchybar"
+brew "FelixKratz/formulae/borders"
+brew "duti"

@@ -1,0 +1,30 @@
+#!/bin/bash
+# Layout after Pe8er's setup (SketchyBar discussion 47), driven by AeroSpace instead of yabai.
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+source "$CONFIG_DIR/globalstyles.sh"
+
+sketchybar --bar "${bar[@]}" --default "${item_defaults[@]}"
+
+sketchybar --add event aerospace_workspace_change \
+           --add event aerospace_mode_change
+
+# left
+source "$ITEM_DIR/mode.sh"
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+# right, first added = rightmost
+source "$ITEM_DIR/datetime.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/keyboard.sh"
+source "$ITEM_DIR/weather.sh"
+
+sketchybar --add bracket left.side mode '/space\..*/' front_app --set left.side "${bracket_defaults[@]}" \
+           --add bracket status date clock battery wifi volume keyboard weather \
+           --set status "${bracket_defaults[@]}"
+
+sketchybar --hotload on
+sketchybar --update
