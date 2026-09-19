@@ -1,0 +1,32 @@
+# Experiment: tabs via tmux, since AeroSpace tiles native macOS tabs as separate windows
+# (AeroSpace #68). Each Ghostty window runs its own tmux session and the cmd shortcuts
+# drive tmux windows/panes. To revert, drop the `config-file = tmux-tabs` line in ./config.
+command = /bin/sh -c 'PATH="$HOME/homebrew/bin:$PATH" exec tmux -L ghostty -f "$HOME/.config/ghostty/tmux-tabs.conf" new-session'
+
+keybind = super+t=text:\x1b[5000~
+# digit_N too: the default goto_tab binds on the physical key win over super+N
+keybind = super+1=text:\x1b[5001~
+keybind = super+digit_1=text:\x1b[5001~
+keybind = super+2=text:\x1b[5002~
+keybind = super+digit_2=text:\x1b[5002~
+keybind = super+3=text:\x1b[5003~
+keybind = super+digit_3=text:\x1b[5003~
+keybind = super+4=text:\x1b[5004~
+keybind = super+digit_4=text:\x1b[5004~
+keybind = super+5=text:\x1b[5005~
+keybind = super+digit_5=text:\x1b[5005~
+keybind = super+6=text:\x1b[5006~
+keybind = super+digit_6=text:\x1b[5006~
+keybind = super+7=text:\x1b[5007~
+keybind = super+digit_7=text:\x1b[5007~
+keybind = super+8=text:\x1b[5008~
+keybind = super+digit_8=text:\x1b[5008~
+keybind = super+9=text:\x1b[5009~
+keybind = super+digit_9=text:\x1b[5009~
+keybind = super+w=text:\x1b[5010~
+keybind = super+shift+[=text:\x1b[5011~
+keybind = super+shift+]=text:\x1b[5012~
+keybind = ctrl+shift+tab=text:\x1b[5011~
+keybind = ctrl+tab=text:\x1b[5012~
+keybind = super+d=text:\x1b[5013~
+keybind = super+shift+d=text:\x1b[5014~

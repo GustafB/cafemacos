@@ -22,3 +22,6 @@ keybind = super+t=new_window
 
 keybind = alt+minus=decrease_font_size:1
 keybind = alt+equal=increase_font_size:1
+
+# experiment: tmux-backed tabs, overrides cmd-t above; delete this line to go back
+config-file = tmux-tabs
