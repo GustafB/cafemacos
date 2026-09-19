@@ -38,7 +38,8 @@ outer.top = 8
 [mode.main.binding]
 alt-enter = 'exec-and-forget open -na Ghostty'
 alt-shift-enter = 'exec-and-forget open -a Raycast'
-alt-q = 'close'
+# closes a tmux tab in Ghostty when there are several, else plain 'close'
+alt-q = 'exec-and-forget ~/.config/aerospace/close.sh'
 alt-shift-f = 'layout floating tiling'
 alt-shift-i = 'layout horizontal vertical'
 alt-ctrl-l = 'exec-and-forget pmset displaysleepnow'
