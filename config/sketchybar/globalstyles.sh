@@ -9,7 +9,7 @@ APP_FONT="sketchybar-app-font"
 # transparent bar inside the 32pt notch band; the brackets carry the background
 bar=(
   color=$TRANSPARENT position=top topmost=off sticky=on height=32
-  padding_left=4 padding_right=4 corner_radius=0 notch_width=200
+  padding_left=10 padding_right=10 corner_radius=0 notch_width=200
 )
 
 item_defaults=(
